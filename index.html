@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoply - Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./favicon.webp" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./favicon.webp" alt="">
+                <h1>Shoply</h1>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Mahsulot qidirish...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- Cart Icon -->
+            <div class="cart">
+                <button id="cartIcon" class="cart-button">
+                    <i class='bx bx-trash'></i>
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Category Navigation -->
+        <nav id="categoryNav" class="category-nav">
+            <div class="category-container" id="categoryButtons">
+                <!-- Categories will be added here dynamically -->
+            </div>
+        </nav>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul id="categoryButtons"></ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="products">
+                <h2>Mahsulotlar</h2>
+                <div id="productGrid"></div>
+            </section>
+        </div>
+    </main>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Savatcha</h2>
+            <div id="cartItems"></div>
+            <p>Jami: <span id="cartTotal">0</span> so'm</p>
+            <a href="https://t.me/your_telegram_bot" class="telegram-button" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram orqali xarid qilish
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Shoply. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
